@@ -2,6 +2,7 @@ const isProd = process.env.NODE_ENV === 'production' // 生产环境
 
 console.log(isProd)
 
+
 module.exports = {
     outputDir: 'music',
     configureWebpack: {
