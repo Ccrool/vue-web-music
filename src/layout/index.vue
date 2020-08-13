@@ -6,7 +6,7 @@
     <div class="layout-body">
       <!-- 菜单 -->
       <div class="layout-menu">
-
+        <layout-menu />
       </div>
       <!-- 内容 -->
       <div class="layout-content" id="page-content">
@@ -18,6 +18,7 @@
 
 <script>
 import LayoutHeader from './header'
+import LayoutMenu from './menu'
 export default {
   data() {
     return {
@@ -25,8 +26,9 @@ export default {
     }
   },
   components: {
-    LayoutHeader
-  }
+    LayoutHeader,
+    LayoutMenu
+  },
 };
 </script>
 
@@ -35,7 +37,7 @@ export default {
   height: 100%;
 
   > .layout-body {
-    @include flex-box(row, flex-start, center, nowrap);
+    @include flex-box(row, flex-start, flex-start, nowrap);
     // 高度 = 总高度 - 头部
     height: calc(100% - #{$header-height});
 

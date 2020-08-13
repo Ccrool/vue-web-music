@@ -8,16 +8,21 @@
     <div class="header-right">
       <div class="search-box"></div>
       <!-- 主题组件 -->
+      <theme />
     </div>
   </div>
 </template>
 
 <script>
+import Theme from '@/components/theme'
 export default {
   data() {
     return {
 
     }
+  },
+  components: {
+    Theme
   }
 }
 </script>
@@ -26,7 +31,7 @@ export default {
 .layout-header {
   @include flex-box(row, space-between, center, nowrap);
   height: $header-height;
-  background: var(--header-bg-color);
+  background: var(--header-bgcolor);
   padding: {
     right: 36px;
     left: 36px;
